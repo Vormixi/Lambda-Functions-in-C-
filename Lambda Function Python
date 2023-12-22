@@ -1,0 +1,28 @@
+# Regular function to calculate square
+def square(x):
+    return x * x
+
+# Using lambda function to calculate square
+square_lambda = lambda x: x * x
+
+# Regular function to add two numbers
+def add(x, y):
+    return x + y
+
+# Using lambda function to add two numbers
+add_lambda = lambda x, y: x + y
+
+# Using lambda function as an argument to a higher-order function
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = list(map(lambda x: x * x, numbers))
+filtered_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+
+# Output
+print("Square using regular function:", square(5))  # Output: 25
+print("Square using lambda function:", square_lambda(5))  # Output: 25
+
+print("Addition using regular function:", add(3, 4))  # Output: 7
+print("Addition using lambda function:", add_lambda(3, 4))  # Output: 7
+
+print("Squared numbers using lambda and map:", squared_numbers)  # Output: [1, 4, 9, 16, 25]
+print("Filtered numbers using lambda and filter:", filtered_numbers)  # Output: [2, 4]
